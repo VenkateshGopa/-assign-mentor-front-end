@@ -1,24 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Switch, Route , Redirect} from "react-router-dom";
+import Addmentor from "./components/addmentor";
+import Addstudent from "./components/addstudent";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getmentordata, getStudentdata } from "./store/mentor-student";
+import Layout from "./components/layout/layout";
+import Mentees from "./components/mentees";
+import AssignMentors from "./components/AssignMentors";
+import Unassignedstudents from "./components/Unassignedstudents";
+import Changementor from "./components/changementor";
+import Home from "./components/Home";
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getStudentdata());
+    dispatch(getmentordata());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Switch>
+        <Route path='/' exact>
+          <Redirect to='/home'/>
+        </Route>
+        <Route path="/home" exact>
+          <Home/>
+        </Route>
+        <Route path="/addstudent">
+          <Addstudent />
+        </Route>
+        <Route path="/addmentor">
+          <Addmentor />
+        </Route>
+        <Route path="/mentees">
+          <Mentees />
+        </Route>
+        <Route path="/assignMentors">
+          <AssignMentors />
+        </Route>
+        <Route path='/unassignedstudents'>
+          <Unassignedstudents/>
+        </Route>
+        <Route path='/changementor'>
+          <Changementor/>
+        </Route>
+        <Route path='*'>
+          <Redirect to='/home'/>
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 

@@ -1,0 +1,90 @@
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 15px;
+  margin: 20px auto;
+  background-color: #000000d2;
+  width: 60%;
+  border-radius: 4px;
+}
+.div label,
+.div select,
+.div button {
+  margin: 10px;
+}
+.label {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.button {
+  margin-top: 20px;
+  border: none;
+  color: white;
+  background-color: black;
+  padding: 3px 15px;
+  border-radius: 4px;
+}
+.button:hover {
+  color: black;
+  background-color: rgb(245, 166, 20);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.mentees {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 4px;
+  margin: 10px;
+}
+.menteesdiv {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 70vh;
+  padding: 15px;
+  margin: 20px auto;
+  background-color: #000000d2;
+  width: 60%;
+  border-radius: 4px;
+}
+.hide{
+  display: none;
+}
+.menteesdiv::-webkit-scrollbar {
+  width: 5px;
+}
+
+.menteesdiv::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.menteesdiv::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.menteesdiv::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.menteesdiv p {
+  margin: 5px;
+  color: white;
+  font-weight: 400;
+}
+.mentees p {
+  margin: 5px;
+  color: black;
+}
+
+@media screen and (max-width: 450px) {
+  .div {
+    width: 90%;
+  }
+  .menteesdiv {
+    width: 90%;
+  }
+}

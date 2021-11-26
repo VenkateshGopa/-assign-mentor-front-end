@@ -1,0 +1,164 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.425);
+    padding: 20px;
+    margin: 20px;
+}
+.div p{
+    font-size: 20px;
+    color:rgb(245, 166, 20);
+    font-weight: 600;
+    margin: 0;
+}
+.div i{
+    font-size: 9px;
+    color: white;
+}
+.label{
+    font-size: 15px;
+    display: block;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+.input {
+    width: 100%;
+    font-size: 15px;
+    display: block;
+    color: rgb(0, 0, 0);
+}
+.select{
+    width: 100%;
+    padding: 1px 2px;
+    border: 1px solid rgb(66, 66, 66);
+    font-size: 15px;
+    display: block;
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+}
+.button{
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 6px 20px;
+    border-radius: 4px;
+}
+.button:hover{
+    color: black;
+    background-color: rgb(245, 166, 20);
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+.heading-unassigned p{
+    color: rgb(245, 166, 20);
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-bottom: 8px;
+}
+.div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 20px auto;
+    background-color: #000000d2;
+    width: 60%;
+    border-radius: 4px;
+}
+.value{
+    color: white;
+    padding-left: 5px;
+}
+input[type = "checkbox"]{
+    cursor: pointer;
+}
+.checkbox:checked{
+    background: rgb(245, 166, 20);
+    color: black;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.box{
+  position: fixed;
+  top: 35vh;
+  left: 25%;
+  width: 50%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+.modelbutton{
+    margin-top: 20px;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 6px 30px;
+    border-radius: 4px;
+}
+.modelbutton:hover{
+    color: black;
+    background-color: rgb(245, 166, 20);
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+.box p{
+    font-size: 15px;
+    color:black;
+    padding-bottom: 15px;
+}
+.modelbtn{
+    display: flex;
+    justify-content: flex-end;
+
+}
+@media screen and (max-width:500px) {
+    .div{
+        width: 90%;
+    }
+    .form{
+        width: 100%;
+    }
+    .box{
+        top: 35vh;
+        left: 10%;
+        width: 80%;
+    }
+    .box p{
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+}
+@media screen and (min-width:700px) and (max-width:1500px) {
+    .div{
+        width: 50%;
+    }
+    .form{
+        width: 90%;
+    }
+    .box{
+        top: 35vh;
+        left: 30%;
+        width: 40%;
+    }
+}
