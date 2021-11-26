@@ -87,4 +87,7 @@
   .menteesdiv {
     width: 90%;
   }
+  .mentees p{
+    font-size: 10px;
+  }
 }
